@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de usuario</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <main class="form-container">
+        <section class="card">
+        <header class="card-header">
+            <h1>Registro de Clientes</h1>
+        </header>
+
+        <form action="#" method="POST" class="form-grid">
+        
+            <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+                pattern="[A-Za-záéíóúñÑ ]+"
+                placeholder="Ej. María Giménez"
+                title="Solo se permiten letras y espacios"
+            >
+            </div>
+
+            <div class="form-group">
+            <label for="cedula">Cédula</label>
+            <input
+                type="tel"
+                id="cedula"
+                name="cedula"
+                required
+                pattern="[0-9]{8,10}"
+                placeholder="Ej. 12345678"
+                title="Debe contener entre 8 y 10 dígitos"
+            >
+            </div>
+
+            <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="ejemplo@correo.com"
+            >
+            </div>
+
+            <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                required
+                pattern="[0-9]{11}"
+                placeholder="Ej. 04141234567"
+                title="Debe contener exactamente 11 dígitos"
+            >
+            </div>
+
+            <div class="form-group">
+            <label for="sector">Sector / Industria</label>
+            <select id="sector" name="sector" required>
+                <option value="" disabled selected hidden>Selecciona una opción</option>
+                <option value="tecnologia">Tecnología</option>
+                <option value="comercio">Comercio</option>
+                <option value="salud">Salud</option>
+                <option value="educacion">Educación</option>
+            </select>
+            </div>
+
+            <div class="form-group">
+            <label>Tipo de cliente</label>
+            <div class="radio-container">
+                <label class="radio-label">
+                <input type="radio" name="tipo_cliente" value="natural" checked>
+                Natural
+                </label>
+                <label class="radio-label">
+                <input type="radio" name="tipo_cliente" value="juridico">
+                Jurídico
+                </label>
+            </div>
+            </div>
+
+            <div class="form-group full-width">
+            <label for="direccion">Dirección</label>
+            <textarea
+                id="direccion"
+                name="direccion"
+                rows="3"
+                placeholder="Av. Principal, Edificio Centro, Piso 2..."
+            ></textarea>
+            </div>
+
+            <div class="form-actions full-width">
+            <button type="submit" class="btn-submit">Registrar</button>
+            <p class="login-prompt">
+                ¿Ya tienes cuenta? <a href="InicioSesion.html">Inicia sesión</a>
+            </p>
+            </div>
+
+        </form>
+        </section>
+    </main>
+    
+</body>
+</html>
